@@ -10,7 +10,8 @@ def clearAll():
 def correction():
     input_word = word1_field.get()
     corrected_word = corrector.correction(input_word)
-    word2_field.insert(10, corrected_word)
+    word2_field.delete(0, END)
+    word2_field.insert(0, corrected_word)
 
 root = Tk()
 root.configure(background='aqua')
